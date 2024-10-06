@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 public class CaseService {
 
@@ -19,7 +20,9 @@ public class CaseService {
     public List<Case> getAllCases() {
         return caseRepository.findAll();
     }
-
+    public Optional<Case> getCaseById(Long id) {
+        return caseRepository.findById(id);
+    }
     public Case createCase(Case newCase) {
         newCase.setCreationDate(LocalDateTime.now());
         return caseRepository.save(newCase);
