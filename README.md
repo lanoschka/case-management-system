@@ -25,3 +25,10 @@ To run the application, follow these steps:
    ```bash
    git clone https://github.com/your-username/repository-name.git
    cd repository-name
+
+2. **Run the Application**:Ensure you have JDK 17 and Maven installed. Then run the following command:
+   ```bash
+   mvn spring-boot:run
+2. **Access the Application**:After starting the application, you can access the H2 Console by entering the following URL in your browser:
+   ```bash
+   http://localhost:8080/h2-console
